@@ -1,0 +1,42 @@
+CREATE DATABASE RESTART1;
+USE RESTART;
+CREATE TABLE RESTART (
+    StudentID int,
+    RestartCity varchar(255),
+    GraduationDate date);
+    
+INSERT INTO RESTART (StudentID, Name, RestartCity, GraduationDate) VALUES
+(1, 'Sarah', 'New York', '2022-05-01'),
+(2, 'Bob', 'Los Angeles', '2022-05-01'),
+(3, 'Mary', 'Chicago', '2022-05-01'),
+(4, 'Mia' 'Houston', '2022-05-01'),
+(5, 'Lenny', 'Phoenix', '2022-05-01'),
+(6, 'Juan',' Philadelphia', '2022-05-01'),
+(7, 'minnie', 'San Antonio', '2022-05-01'),
+(8, 'Ruth', 'San Diego', '2022-05-01'),
+(9, 'Kai', 'Dallas', '2022-05-01'),
+(10, 'Ben', 'San Jose', '2022-05-01');
+
+SELECT * FROM RESTART;
+
+CREATE TABLE CLOUD_PRACTITIONER (
+    StudentID int,
+    CertificationDate Date);
+ 
+INSERT INTO CLOUD_PRACTITIONER (
+    StudentID int,
+    CertificationDate Date);
+    
+(1, '2022-9-2'),
+(2, '2022-2-2'),
+(3, '2022-7-2'),
+(4, '2022-5-2'),
+(5, '2022-14-2');
+
+SELECT RESTART.StudentID, RESTART.name, CLOUD_PRACTITIONER.CertificationDate
+FROM RESTART
+JOIN CLOUD_PRACTITIONER
+ON RESTART.StudentID = CLOUD_PRACTITIONER.StudentID;
+
+SELECT * FROM RESTART;
+
